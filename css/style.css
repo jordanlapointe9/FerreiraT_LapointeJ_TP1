@@ -371,22 +371,165 @@ template {
 # Mixins
 --------------------------------------------------------------*/
 /* ------------------------------------------------------------
+# Extends
+--------------------------------------------------------------*/
+#menu ul, header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* ------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
 /* ------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-/* ------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
+#menu ul {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+}
+
+#menu li {
+  list-style-type: none;
+}
+
+#menu li:not(:last-child) {
+  padding-right: 2em;
+}
+
+#menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+#menu a:hover {
+  color: #d31a1a;
+}
+
+/* ----------------------------------------- */
+/* ---------- Navigation Tablette ---------- */
+/* ----------------------------------------- */
+@media screen and (max-width: 1024px) {
+  #burger:checked ~ label > div:nth-child(1) {
+    -webkit-transform: rotate(-45deg) translate(-7px, 6px);
+            transform: rotate(-45deg) translate(-7px, 6px);
+  }
+  #burger:checked ~ label > div:nth-child(2) {
+    opacity: 0;
+  }
+  #burger:checked ~ label > div:nth-child(3) {
+    -webkit-transform: rotate(45deg) translate(-9px, -8px);
+            transform: rotate(45deg) translate(-9px, -8px);
+  }
+  #burger:checked ~ .navContainer {
+    width: 100%;
+  }
+}
+
+/* ----------------------------------------- */
+/* ----------- Navigation Mobile ----------- */
+/* ----------------------------------------- */
 /* ------------------------------------------------------------
 # Entete
 --------------------------------------------------------------*/
+header {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 5px solid #d31a1a;
+  height: 5vh;
+  padding: 0.8em 2em;
+}
+
+header img {
+  width: 250px;
+}
+
+header label {
+  display: none;
+}
+
+header #burger {
+  display: none;
+}
+
+header button {
+  width: 15em;
+  height: 3em;
+  color: #d31a1a;
+  background: #fff;
+  border: 2px solid #d31a1a;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header button:hover {
+  color: #fff;
+  background: #d31a1a;
+  border: 2px solid #d31a1a;
+  outline: none;
+}
+
+/* ----------------------------------------- */
+/* ---------- Navigation Tablette ---------- */
+/* ----------------------------------------- */
+@media screen and (max-width: 1024px) {
+  header label {
+    z-index: 2;
+    padding-left: 57vw;
+  }
+  header label div {
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background-color: #d31a1a;
+  }
+}
+
+/* ----------------------------------------- */
+/* ----------- Navigation Mobile ----------- */
+/* ----------------------------------------- */
 /* ------------------------------------------------------------
 # Pied-page 
 --------------------------------------------------------------*/
 /* ------------------------------------------------------------
 # Elements
 ----------------------------------------------------------------*/
+/**
+regular 400
+medium 500
+semi-bold 600
+bold 700
+**/
+* {
+  font-family: 'Exo 2', sans-serif;
+}
+
 /*-------------------------------------------------------------- */
 /*# sourceMappingURL=style.css.map */

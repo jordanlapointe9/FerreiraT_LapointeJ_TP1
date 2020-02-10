@@ -1,0 +1,60 @@
+#menu {
+
+    ul {
+        @extend %displayFlexDefault;
+        flex-direction: row;
+
+        padding: 0;
+    }
+
+    li {
+        list-style-type: none;
+        
+        &:not(:last-child){
+            padding-right: 2em;
+        }
+    }
+
+    a{
+        text-transform: uppercase;
+        text-decoration: none;
+
+        color: $black;
+
+        transition: all 0.2s ease-in;
+
+        &:hover{
+            color: $red;
+        }
+    }
+}
+
+
+/* ----------------------------------------- */
+/* ---------- Navigation Tablette ---------- */
+/* ----------------------------------------- */
+@include TabletPortrait {
+    #burger:checked~label>div:nth-child(1) {
+        transform: rotate(-45deg) translate(-7px, 6px);
+    }
+
+    #burger:checked~label>div:nth-child(2) {
+        opacity: 0;
+    }
+
+    #burger:checked~label>div:nth-child(3) {
+        transform: rotate(45deg) translate(-9px, -8px);
+    }
+
+    #burger:checked~.navContainer {
+        width: 100%;
+    }
+}
+
+
+/* ----------------------------------------- */
+/* ----------- Navigation Mobile ----------- */
+/* ----------------------------------------- */
+@include MobilePortrait {
+
+}

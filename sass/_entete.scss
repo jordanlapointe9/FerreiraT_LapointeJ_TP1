@@ -1,0 +1,78 @@
+header {
+
+    @extend %displayFlexDefault;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: $white;
+    border-bottom: 5px solid $red;
+
+    height: 5vh;
+    padding: 0.8em 2em;
+
+    img {
+        width: 250px;
+    }
+
+    label {
+        display: none;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    button {
+        width: 15em;
+        height: 3em;
+
+        color: $red;
+        background: $white;
+
+        border: 2px solid $red;
+        outline: none;
+        
+        cursor: pointer;
+
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $white;
+            background: $red;
+
+            border: 2px solid $red;
+            outline: none;
+        }
+    }
+}
+
+
+/* ----------------------------------------- */
+/* ---------- Navigation Tablette ---------- */
+/* ----------------------------------------- */
+@include TabletPortrait {
+
+    header{
+        label {
+            z-index: 2;
+            padding-left: 57vw;
+            
+            div {
+                width: 35px;
+                height: 5px;
+                margin: 6px 0;
+                transition: 0.4s;
+                background-color: $red;
+            }
+        }
+    }
+}
+
+
+/* ----------------------------------------- */
+/* ----------- Navigation Mobile ----------- */
+/* ----------------------------------------- */
+@include MobilePortrait {
+
+}
