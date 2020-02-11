@@ -11,15 +11,63 @@ bold 700
 
 main {
     @extend %displayFlexDefault;
-
     height: 100vh;
 
     .content {
         @extend %displayFlexDefault;
-
         width: 85vw;
-
         text-align: justify;
         text-align-last: center;
+
+        div.AnimationPizza {
+            @extend %displayFlexDefault;
+            flex-direction: row;
+            height: 25vh;
+            width: 75%;
+            animation: AnimationPizzaTroisQuart 1.75s linear;
+
+            img {
+                height: 100%;
+
+                &:first-child {
+                    animation: AnimationPizzaQuart 1.5s linear;
+                }
+            }
+        }
     }
 }
+
+//Animation du quart de la pizza
+@keyframes AnimationPizzaQuart {
+    from {
+        transform: translateX(-25vw) translateY(0vh) rotate(0deg);
+    }
+    25% {
+        transform: translateX(-15vw) translateY(10vh) rotate(90deg);
+    }
+    50% {
+        transform: translateX(-10vw) translateY(-10vh) rotate(180deg);
+    }
+    75% {
+        transform: translateX(-5vw) translateY(-2vh) rotate(270deg);
+    }
+    to {
+        transform: translateX(0) translateY(0vh) rotate(360deg);
+    }
+  }
+
+//Animation des trois quarts de la pizza
+@keyframes AnimationPizzaTroisQuart {
+    from {
+        transform: scaleX(1);
+    }
+    90% {
+        transform: scaleX(1);
+    }
+    95% {
+        transform: scaleX(1.1);
+    }
+    to {
+        transform: scaleX(1);
+    }
+  }
