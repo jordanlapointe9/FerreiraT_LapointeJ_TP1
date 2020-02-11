@@ -9,3 +9,12 @@
         @content;
     }
 }
+
+@mixin SpeciauxPizza() {
+    width: 100%;
+    background-image: url(/medias/img/Speciaux/Banderole.png);
+    background-position: 50% 100%;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
+}

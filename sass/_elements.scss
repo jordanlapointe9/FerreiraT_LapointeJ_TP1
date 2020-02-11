@@ -34,6 +34,53 @@ main {
                 }
             }
         }
+
+        div.SpeciauxBandroleConteneur {
+            display: flex;
+            flex-direction: row;
+            width: 55%;
+            height: 10vh;
+        }
+
+        div.SpeciauxBandrole {
+            @include SpeciauxPizza();
+            margin: 0 auto;
+
+            div {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    text-align: center;
+                    margin: 0 auto;
+                    justify-content: center;
+                    padding-top: 1em;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1.25em;
+                }
+            }
+        }
+
+        div.Speciaux {
+            @extend %displayFlexDefault;
+            flex-direction: row;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            height: 25vh;
+            width: 75%;
+            margin-top: 3vh;
+
+            img {
+                height: 100%;
+                padding-left: 1.5vw;
+                padding-right: 1.5vw;
+            }
+        }
     }
 }
 

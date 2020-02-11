@@ -373,7 +373,7 @@ template {
 /* ------------------------------------------------------------
 # Extends
 --------------------------------------------------------------*/
-#menu ul, header, footer, main, main .content, main .content div.AnimationPizza {
+#menu ul, header, footer, main, main .content, main .content div.AnimationPizza, main .content div.Speciaux {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -612,6 +612,79 @@ main .content div.AnimationPizza img {
 main .content div.AnimationPizza img:first-child {
   -webkit-animation: AnimationPizzaQuart 1.5s linear;
           animation: AnimationPizzaQuart 1.5s linear;
+}
+
+main .content div.SpeciauxBandroleConteneur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 55%;
+  height: 10vh;
+}
+
+main .content div.SpeciauxBandrole {
+  width: 100%;
+  background-image: url(/medias/img/Speciaux/Banderole.png);
+  background-position: 50% 100%;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: 0 auto;
+}
+
+main .content div.SpeciauxBandrole div {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .content div.SpeciauxBandrole div p {
+  text-align: center;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1em;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+main .content div.Speciaux {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  height: 25vh;
+  width: 75%;
+  margin-top: 3vh;
+}
+
+main .content div.Speciaux img {
+  height: 100%;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
 }
 
 @-webkit-keyframes AnimationPizzaQuart {
