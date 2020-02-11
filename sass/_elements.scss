@@ -8,3 +8,18 @@ bold 700
 * {
     font-family: 'Exo 2', sans-serif;
 }
+
+main {
+    @extend %displayFlexDefault;
+
+    height: 100vh;
+
+    .content {
+        @extend %displayFlexDefault;
+
+        width: 85vw;
+
+        text-align: justify;
+        text-align-last: center;
+    }
+}

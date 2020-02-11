@@ -373,7 +373,7 @@ template {
 /* ------------------------------------------------------------
 # Extends
 --------------------------------------------------------------*/
-#menu ul, header {
+#menu ul, header, footer, main, main .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,6 +518,15 @@ header button:hover {
 /* ------------------------------------------------------------
 # Pied-page 
 --------------------------------------------------------------*/
+footer {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  height: 5vh;
+  padding: 0.8em 2em;
+  border-top: 5px solid #d31a1a;
+}
+
 /* ------------------------------------------------------------
 # Elements
 ----------------------------------------------------------------*/
@@ -529,6 +538,16 @@ bold 700
 **/
 * {
   font-family: 'Exo 2', sans-serif;
+}
+
+main {
+  height: 100vh;
+}
+
+main .content {
+  width: 85vw;
+  text-align: justify;
+  text-align-last: center;
 }
 
 /*-------------------------------------------------------------- */

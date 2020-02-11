@@ -1,0 +1,10 @@
+footer {
+    @extend %displayFlexDefault;
+
+    align-items: start;
+
+    height: 5vh;
+    padding: 0.8em 2em;
+
+    border-top: 5px solid $red;
+}
