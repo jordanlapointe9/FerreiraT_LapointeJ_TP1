@@ -441,6 +441,50 @@ template {
   #burger:checked ~ .navContainer {
     width: 100%;
   }
+  .navContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    background: #fff;
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .navContainer #menu ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
+  .navContainer #menu li {
+    padding: 0;
+    padding-bottom: 3em;
+  }
+  .navContainer #menu a {
+    font-size: 1.5em;
+  }
 }
 
 /* ----------------------------------------- */
@@ -499,8 +543,8 @@ header button:hover {
 /* ----------------------------------------- */
 @media screen and (max-width: 1024px) {
   header label {
+    display: block;
     z-index: 2;
-    padding-left: 57vw;
   }
   header label div {
     width: 35px;
