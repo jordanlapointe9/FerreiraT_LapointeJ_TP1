@@ -571,6 +571,15 @@ footer {
   border-top: 5px solid #d31a1a;
 }
 
+/* ----------------------------------------- */
+/* ----------- Pied de page Mobile ----------- */
+/* ----------------------------------------- */
+@media screen and (max-width: 500px) {
+  footer {
+    text-align: center;
+  }
+}
+
 /* ------------------------------------------------------------
 # Elements
 ----------------------------------------------------------------*/
@@ -592,6 +601,10 @@ main .content {
   width: 85vw;
   text-align: justify;
   text-align-last: center;
+}
+
+main .content h1, main .content h2 {
+  text-align: center;
 }
 
 main .content div.AnimationPizza {
@@ -649,10 +662,22 @@ main .content div.Speciaux img:nth-child(3) {
           animation: AnimationPizzaSpeciaux3 3s linear;
 }
 
+main .content a {
+  color: #000;
+  font-weight: bold;
+  font-size: 2vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
 @-webkit-keyframes AnimationPizzaSpeciaux1 {
   from {
-    -webkit-transform: translateX(-25vw) rotate(0deg);
-            transform: translateX(-25vw) rotate(0deg);
+    -webkit-transform: translateX(-45vw) rotate(0deg);
+            transform: translateX(-45vw) rotate(0deg);
+  }
+  85% {
+    -webkit-transform: translateX(5vw) rotate(300deg);
+            transform: translateX(5vw) rotate(300deg);
   }
   to {
     -webkit-transform: translateX(0) rotate(360deg);
@@ -662,8 +687,12 @@ main .content div.Speciaux img:nth-child(3) {
 
 @keyframes AnimationPizzaSpeciaux1 {
   from {
-    -webkit-transform: translateX(-25vw) rotate(0deg);
-            transform: translateX(-25vw) rotate(0deg);
+    -webkit-transform: translateX(-45vw) rotate(0deg);
+            transform: translateX(-45vw) rotate(0deg);
+  }
+  85% {
+    -webkit-transform: translateX(5vw) rotate(300deg);
+            transform: translateX(5vw) rotate(300deg);
   }
   to {
     -webkit-transform: translateX(0) rotate(360deg);
@@ -673,12 +702,10 @@ main .content div.Speciaux img:nth-child(3) {
 
 @-webkit-keyframes AnimationPizzaSpeciaux2 {
   from {
-    opacity: 0;
     -webkit-transform: scale(0);
             transform: scale(0);
   }
   to {
-    opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
@@ -686,12 +713,10 @@ main .content div.Speciaux img:nth-child(3) {
 
 @keyframes AnimationPizzaSpeciaux2 {
   from {
-    opacity: 0;
     -webkit-transform: scale(0);
             transform: scale(0);
   }
   to {
-    opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
@@ -699,8 +724,12 @@ main .content div.Speciaux img:nth-child(3) {
 
 @-webkit-keyframes AnimationPizzaSpeciaux3 {
   from {
-    -webkit-transform: translateX(25vw) rotate(360deg);
-            transform: translateX(25vw) rotate(360deg);
+    -webkit-transform: translateX(45vw) rotate(360deg);
+            transform: translateX(45vw) rotate(360deg);
+  }
+  85% {
+    -webkit-transform: translateX(-5vw) rotate(60deg);
+            transform: translateX(-5vw) rotate(60deg);
   }
   to {
     -webkit-transform: translateX(0) rotate(0deg);
@@ -710,8 +739,12 @@ main .content div.Speciaux img:nth-child(3) {
 
 @keyframes AnimationPizzaSpeciaux3 {
   from {
-    -webkit-transform: translateX(25vw) rotate(360deg);
-            transform: translateX(25vw) rotate(360deg);
+    -webkit-transform: translateX(45vw) rotate(360deg);
+            transform: translateX(45vw) rotate(360deg);
+  }
+  85% {
+    -webkit-transform: translateX(-5vw) rotate(60deg);
+            transform: translateX(-5vw) rotate(60deg);
   }
   to {
     -webkit-transform: translateX(0) rotate(0deg);
@@ -832,6 +865,46 @@ main .content div.Speciaux img:nth-child(3) {
     height: auto;
     width: 32.5vw;
     padding: 1.5vw;
+  }
+  @-webkit-keyframes AnimationPizzaSpeciaux1 {
+    from {
+      -webkit-transform: translateX(-45vw) rotate(0deg);
+              transform: translateX(-45vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateX(0) rotate(360deg);
+              transform: translateX(0) rotate(360deg);
+    }
+  }
+  @keyframes AnimationPizzaSpeciaux1 {
+    from {
+      -webkit-transform: translateX(-45vw) rotate(0deg);
+              transform: translateX(-45vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateX(0) rotate(360deg);
+              transform: translateX(0) rotate(360deg);
+    }
+  }
+  @-webkit-keyframes AnimationPizzaSpeciaux3 {
+    from {
+      -webkit-transform: translateX(45vw) rotate(360deg);
+              transform: translateX(45vw) rotate(360deg);
+    }
+    to {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+    }
+  }
+  @keyframes AnimationPizzaSpeciaux3 {
+    from {
+      -webkit-transform: translateX(45vw) rotate(360deg);
+              transform: translateX(45vw) rotate(360deg);
+    }
+    to {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+    }
   }
 }
 

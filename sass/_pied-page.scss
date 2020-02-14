@@ -8,3 +8,12 @@ footer {
 
     border-top: 5px solid $red;
 }
+
+/* ----------------------------------------- */
+/* ----------- Pied de page Mobile ----------- */
+/* ----------------------------------------- */
+@include MobilePortrait {
+    footer {
+        text-align: center;
+    }
+}
