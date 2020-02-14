@@ -35,37 +35,6 @@ main {
             }
         }
 
-        div.SpeciauxBandroleConteneur {
-            display: flex;
-            flex-direction: row;
-            width: 55%;
-            height: 10vh;
-        }
-
-        div.SpeciauxBandrole {
-            @include SpeciauxPizza();
-            margin: 0 auto;
-
-            div {
-                height: 100%;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-
-                p {
-                    text-align: center;
-                    margin: 0 auto;
-                    justify-content: center;
-                    padding-top: 1em;
-                    color: white;
-                    font-weight: bold;
-                    font-size: 1.25em;
-                }
-            }
-        }
-
         div.Speciaux {
             @extend %displayFlexDefault;
             flex-direction: row;
@@ -79,8 +48,52 @@ main {
                 height: 100%;
                 padding-left: 1.5vw;
                 padding-right: 1.5vw;
+
+                &:first-child {
+                    animation: AnimationPizzaSpeciaux1 3s linear;
+                }
+
+                &:nth-child(2) {
+                    animation: AnimationPizzaSpeciaux2 3s linear;
+                }
+
+                &:nth-child(3) {
+                    animation: AnimationPizzaSpeciaux3 3s linear;
+                }
             }
         }
+    }
+}
+
+//Animation de la première pizza qui a un spécial
+@keyframes AnimationPizzaSpeciaux1 {
+    from {
+        transform: translateX(-25vw) rotate(0deg);
+    }
+    to {
+        transform: translateX(0) rotate(360deg);
+    }
+}
+
+//Animation de la première pizza qui a un spécial
+@keyframes AnimationPizzaSpeciaux2 {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+//Animation de la troisième pizza qui a un spécial
+@keyframes AnimationPizzaSpeciaux3 {
+    from {
+        transform: translateX(25vw) rotate(360deg);
+    }
+    to {
+        transform: translateX(0) rotate(0deg);
     }
 }
 
@@ -118,3 +131,73 @@ main {
         transform: scaleX(1);
     }
   }
+
+
+  /* ----------------------------------------- */
+/* ---------- Elements Tablette ---------- */
+/* ----------------------------------------- */
+@include TabletPortrait {
+    main {
+        height: auto;
+
+        .content 
+        {
+            div.AnimationPizza {
+                height: auto;
+                margin-top: 5vh;
+                padding-top: 2.5vh;
+                padding-bottom: 2.5vh;
+
+                img {
+                    width: 22.5vw;
+                }
+
+                img:first-child {
+                    width: 7.5vw;
+                }
+            }
+
+            div.Speciaux {
+                width: auto;
+                grid-template-columns: auto;
+                height: auto ;
+
+                img {
+                    height: auto;
+                    width: 32.5vw;
+                    padding: 1.5vw;
+                }
+            }
+        }
+    }
+}
+
+
+/* ----------------------------------------- */
+/* ----------- Elements Mobile ----------- */
+/* ----------------------------------------- */
+@include MobilePortrait {
+    main {
+        .content 
+        {
+            div.AnimationPizza {
+                padding-top: 5vh;
+                padding-bottom: 5vh;
+
+                img {
+                    width: 37.5vw;
+                }
+
+                img:first-child {
+                    width: 12.5vw;
+                }
+            }
+
+            div.Speciaux {
+                img {
+                    width: 65vw;
+                }
+            }
+        }
+    }
+}
