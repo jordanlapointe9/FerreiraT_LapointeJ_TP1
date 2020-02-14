@@ -22,29 +22,6 @@ header {
     #burger {
         display: none;
     }
-
-    button {
-        width: 15em;
-        height: 3em;
-
-        color: $red;
-        background: $white;
-
-        border: 2px solid $red;
-        outline: none;
-        
-        cursor: pointer;
-
-        transition: all 0.2s ease-in-out;
-
-        &:hover {
-            color: $white;
-            background: $red;
-
-            border: 2px solid $red;
-            outline: none;
-        }
-    }
 }
 
 
@@ -66,6 +43,8 @@ header {
                 background-color: $red;
             }
         }
+
+        padding: 0.8em 1.5em;
     }
 }
 
