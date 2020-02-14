@@ -373,7 +373,7 @@ template {
 /* ------------------------------------------------------------
 # Extends
 --------------------------------------------------------------*/
-#menu ul, header, footer, main, main .content {
+#menu ul, header, footer, main, main .content, .slider .slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -592,6 +592,35 @@ main .content {
   width: 85vw;
   text-align: justify;
   text-align-last: center;
+}
+
+/************* CSS pour le caroussel *************/
+.slider {
+  width: 100vw;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+.slider .slide {
+  width: 100%;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slider .slide div {
+  scroll-behavior: smooth;
+}
+
+.slider .slide img {
+  width: 100%;
+  scroll-snap-align: start;
 }
 
 /*-------------------------------------------------------------- */
