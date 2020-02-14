@@ -373,7 +373,7 @@ template {
 /* ------------------------------------------------------------
 # Extends
 --------------------------------------------------------------*/
-.navContainer, .navContainer #menu ul, header, footer, main, main .content, .slider .slide {
+.navContainer, .navContainer #menu ul, header, footer, main, main .content, main .content div.AnimationPizza, main .content div.Speciaux, .slider .slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -619,13 +619,340 @@ bold 700
 }
 
 main {
-  height: 100vh;
+  height: auto;
 }
 
 main .content {
   width: 85vw;
   text-align: justify;
   text-align-last: center;
+}
+
+main .content h1, main .content h2 {
+  text-align: center;
+}
+
+main .content div.AnimationPizza {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 25vh;
+  width: 75%;
+  margin-top: 5vh;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+  -webkit-animation: AnimationPizzaTroisQuart 1.75s linear;
+          animation: AnimationPizzaTroisQuart 1.75s linear;
+}
+
+main .content div.AnimationPizza img {
+  height: 100%;
+}
+
+main .content div.AnimationPizza img:first-child {
+  -webkit-animation: AnimationPizzaQuart 1.5s linear;
+          animation: AnimationPizzaQuart 1.5s linear;
+}
+
+main .content div.Speciaux {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  height: 25vh;
+  width: 75%;
+  margin-top: 3vh;
+}
+
+main .content div.Speciaux img {
+  height: 100%;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+}
+
+main .content div.Speciaux img:first-child {
+  -webkit-animation: AnimationPizzaSpeciaux1 3s linear;
+          animation: AnimationPizzaSpeciaux1 3s linear;
+}
+
+main .content div.Speciaux img:nth-child(2) {
+  -webkit-animation: AnimationPizzaSpeciaux2 3s linear;
+          animation: AnimationPizzaSpeciaux2 3s linear;
+}
+
+main .content div.Speciaux img:nth-child(3) {
+  -webkit-animation: AnimationPizzaSpeciaux3 3s linear;
+          animation: AnimationPizzaSpeciaux3 3s linear;
+}
+
+main .content a {
+  color: #000;
+  font-weight: bold;
+  font-size: 2vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+@-webkit-keyframes AnimationPizzaSpeciaux1 {
+  from {
+    -webkit-transform: translateX(-45vw) rotate(0deg);
+            transform: translateX(-45vw) rotate(0deg);
+  }
+  85% {
+    -webkit-transform: translateX(5vw) rotate(300deg);
+            transform: translateX(5vw) rotate(300deg);
+  }
+  to {
+    -webkit-transform: translateX(0) rotate(360deg);
+            transform: translateX(0) rotate(360deg);
+  }
+}
+
+@keyframes AnimationPizzaSpeciaux1 {
+  from {
+    -webkit-transform: translateX(-45vw) rotate(0deg);
+            transform: translateX(-45vw) rotate(0deg);
+  }
+  85% {
+    -webkit-transform: translateX(5vw) rotate(300deg);
+            transform: translateX(5vw) rotate(300deg);
+  }
+  to {
+    -webkit-transform: translateX(0) rotate(360deg);
+            transform: translateX(0) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes AnimationPizzaSpeciaux2 {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes AnimationPizzaSpeciaux2 {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes AnimationPizzaSpeciaux3 {
+  from {
+    -webkit-transform: translateX(45vw) rotate(360deg);
+            transform: translateX(45vw) rotate(360deg);
+  }
+  85% {
+    -webkit-transform: translateX(-5vw) rotate(60deg);
+            transform: translateX(-5vw) rotate(60deg);
+  }
+  to {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes AnimationPizzaSpeciaux3 {
+  from {
+    -webkit-transform: translateX(45vw) rotate(360deg);
+            transform: translateX(45vw) rotate(360deg);
+  }
+  85% {
+    -webkit-transform: translateX(-5vw) rotate(60deg);
+            transform: translateX(-5vw) rotate(60deg);
+  }
+  to {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+  }
+}
+
+@-webkit-keyframes AnimationPizzaQuart {
+  from {
+    -webkit-transform: translateX(-25vw) translateY(0vh) rotate(0deg);
+            transform: translateX(-25vw) translateY(0vh) rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translateX(-15vw) translateY(10vh) rotate(90deg);
+            transform: translateX(-15vw) translateY(10vh) rotate(90deg);
+  }
+  50% {
+    -webkit-transform: translateX(-10vw) translateY(-10vh) rotate(180deg);
+            transform: translateX(-10vw) translateY(-10vh) rotate(180deg);
+  }
+  75% {
+    -webkit-transform: translateX(-5vw) translateY(-2vh) rotate(270deg);
+            transform: translateX(-5vw) translateY(-2vh) rotate(270deg);
+  }
+  to {
+    -webkit-transform: translateX(0) translateY(0vh) rotate(360deg);
+            transform: translateX(0) translateY(0vh) rotate(360deg);
+  }
+}
+
+@keyframes AnimationPizzaQuart {
+  from {
+    -webkit-transform: translateX(-25vw) translateY(0vh) rotate(0deg);
+            transform: translateX(-25vw) translateY(0vh) rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translateX(-15vw) translateY(10vh) rotate(90deg);
+            transform: translateX(-15vw) translateY(10vh) rotate(90deg);
+  }
+  50% {
+    -webkit-transform: translateX(-10vw) translateY(-10vh) rotate(180deg);
+            transform: translateX(-10vw) translateY(-10vh) rotate(180deg);
+  }
+  75% {
+    -webkit-transform: translateX(-5vw) translateY(-2vh) rotate(270deg);
+            transform: translateX(-5vw) translateY(-2vh) rotate(270deg);
+  }
+  to {
+    -webkit-transform: translateX(0) translateY(0vh) rotate(360deg);
+            transform: translateX(0) translateY(0vh) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes AnimationPizzaTroisQuart {
+  from {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  90% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  95% {
+    -webkit-transform: scaleX(1.1);
+            transform: scaleX(1.1);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes AnimationPizzaTroisQuart {
+  from {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  90% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  95% {
+    -webkit-transform: scaleX(1.1);
+            transform: scaleX(1.1);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+/* ----------------------------------------- */
+/* ---------- Elements Tablette ---------- */
+/* ----------------------------------------- */
+@media screen and (max-width: 1024px) {
+  main {
+    height: auto;
+  }
+  main .content div.AnimationPizza {
+    height: auto;
+    margin-top: 5vh;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+  }
+  main .content div.AnimationPizza img {
+    width: 22.5vw;
+  }
+  main .content div.AnimationPizza img:first-child {
+    width: 7.5vw;
+  }
+  main .content div.Speciaux {
+    width: auto;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    height: auto;
+  }
+  main .content div.Speciaux img {
+    height: auto;
+    width: 32.5vw;
+    padding: 1.5vw;
+  }
+  @-webkit-keyframes AnimationPizzaSpeciaux1 {
+    from {
+      -webkit-transform: translateX(-45vw) rotate(0deg);
+              transform: translateX(-45vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateX(0) rotate(360deg);
+              transform: translateX(0) rotate(360deg);
+    }
+  }
+  @keyframes AnimationPizzaSpeciaux1 {
+    from {
+      -webkit-transform: translateX(-45vw) rotate(0deg);
+              transform: translateX(-45vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: translateX(0) rotate(360deg);
+              transform: translateX(0) rotate(360deg);
+    }
+  }
+  @-webkit-keyframes AnimationPizzaSpeciaux3 {
+    from {
+      -webkit-transform: translateX(45vw) rotate(360deg);
+              transform: translateX(45vw) rotate(360deg);
+    }
+    to {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+    }
+  }
+  @keyframes AnimationPizzaSpeciaux3 {
+    from {
+      -webkit-transform: translateX(45vw) rotate(360deg);
+              transform: translateX(45vw) rotate(360deg);
+    }
+    to {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* ----------- Elements Mobile ----------- */
+/* ----------------------------------------- */
+@media screen and (max-width: 500px) {
+  main .content div.AnimationPizza {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  main .content div.AnimationPizza img {
+    width: 37.5vw;
+  }
+  main .content div.AnimationPizza img:first-child {
+    width: 12.5vw;
+  }
+  main .content div.Speciaux img {
+    width: 65vw;
+  }
 }
 
 /************* CSS pour le caroussel *************/
