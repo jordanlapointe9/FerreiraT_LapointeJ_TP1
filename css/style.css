@@ -627,6 +627,7 @@ main .content {
   display: -ms-flexbox;
   display: flex;
   overflow-x: auto;
+  overflow-y: hidden;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
 }
