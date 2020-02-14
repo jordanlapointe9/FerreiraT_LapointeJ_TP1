@@ -373,7 +373,7 @@ template {
 /* ------------------------------------------------------------
 # Extends
 --------------------------------------------------------------*/
-.navContainer, .navContainer #menu ul, header, footer, main, main .content, .slider .slide {
+#menu ul, header, footer, main, main .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,23 +395,7 @@ template {
 /* ------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-.navContainer {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  width: 75%;
-  background: #fff;
-}
-
-.navContainer #menu {
-  padding-right: 2em;
-}
-
-.navContainer #menu ul {
+#menu ul {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -419,15 +403,15 @@ template {
   padding: 0;
 }
 
-.navContainer #menu li {
+#menu li {
   list-style-type: none;
 }
 
-.navContainer #menu li:not(:last-child) {
+#menu li:not(:last-child) {
   padding-right: 2em;
 }
 
-.navContainer #menu a {
+#menu a {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
@@ -435,27 +419,8 @@ template {
   transition: all 0.2s ease-in;
 }
 
-.navContainer #menu a:hover {
+#menu a:hover {
   color: #d31a1a;
-}
-
-.navContainer button {
-  width: 15em;
-  height: 3em;
-  color: #d31a1a;
-  background: #fff;
-  border: 2px solid #d31a1a;
-  outline: none;
-  cursor: pointer;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.navContainer button:hover {
-  color: #fff;
-  background: #d31a1a;
-  border: 2px solid #d31a1a;
-  outline: none;
 }
 
 /* ----------------------------------------- */
@@ -503,9 +468,6 @@ template {
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  .navContainer #menu {
-    padding: 0;
-  }
   .navContainer #menu ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -519,9 +481,6 @@ template {
   .navContainer #menu li {
     padding: 0;
     padding-bottom: 3em;
-  }
-  .navContainer #menu li:not(:last-child) {
-    padding-right: 0;
   }
   .navContainer #menu a {
     font-size: 1.5em;
@@ -560,13 +519,29 @@ header #burger {
   display: none;
 }
 
+header button {
+  width: 15em;
+  height: 3em;
+  color: #d31a1a;
+  background: #fff;
+  border: 2px solid #d31a1a;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header button:hover {
+  color: #fff;
+  background: #d31a1a;
+  border: 2px solid #d31a1a;
+  outline: none;
+}
+
 /* ----------------------------------------- */
 /* ---------- Navigation Tablette ---------- */
 /* ----------------------------------------- */
 @media screen and (max-width: 1024px) {
-  header {
-    padding: 0.8em 1.5em;
-  }
   header label {
     display: block;
     z-index: 2;
@@ -596,15 +571,6 @@ footer {
   border-top: 5px solid #d31a1a;
 }
 
-/* ----------------------------------------- */
-/* ----------- Pied de page Mobile ----------- */
-/* ----------------------------------------- */
-@media screen and (max-width: 500px) {
-  footer {
-    text-align: center;
-  }
-}
-
 /* ------------------------------------------------------------
 # Elements
 ----------------------------------------------------------------*/
@@ -626,36 +592,6 @@ main .content {
   width: 85vw;
   text-align: justify;
   text-align-last: center;
-}
-
-/************* CSS pour le caroussel *************/
-.slider {
-  width: 100vw;
-  height: 60vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-}
-
-.slider .slide {
-  width: 100%;
-  height: 100%;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-overflow-scrolling: touch;
-}
-
-.slider .slide div {
-  scroll-behavior: smooth;
-}
-
-.slider .slide img {
-  width: 100%;
-  scroll-snap-align: start;
 }
 
 /*-------------------------------------------------------------- */
